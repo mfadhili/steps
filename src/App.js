@@ -16,11 +16,11 @@ function App() {
             <button style={{
                 backgroundColor: '#7950F2',
                 color: '#FFF',
-            }}>Previous</button>
+            }} onClick={() => alert('Previous')}>Previous</button>
             <button style={{
                 backgroundColor: '#7950F2',
                 color: '#FFF',
-            }}>Next</button>
+            }} onClick={() => alert('Next')}>Next</button>
         </div>
     </div>
   );
