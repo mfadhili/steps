@@ -1,6 +1,19 @@
+import {useState} from "react";
 
 function App() {
-    const step = 2;
+    const [step, setStep] = useState(1);
+
+    //const step = 2;
+
+    function handlePrevious() {
+        if (step > 1 )
+            setStep(step - 1);
+    }
+
+    function handleNext() {
+        if (step < 3)
+            setStep(step + 1);
+    }
 
   return (
     <div className="steps">
@@ -16,11 +29,15 @@ function App() {
             <button style={{
                 backgroundColor: '#7950F2',
                 color: '#FFF',
-            }} onClick={() => alert('Previous')}>Previous</button>
+            }}
+                    onClick={handlePrevious}
+            >Previous</button>
             <button style={{
                 backgroundColor: '#7950F2',
                 color: '#FFF',
-            }} onClick={() => alert('Next')}>Next</button>
+            }}
+                   onClick={handleNext}
+            >Next</button>
         </div>
     </div>
   );
